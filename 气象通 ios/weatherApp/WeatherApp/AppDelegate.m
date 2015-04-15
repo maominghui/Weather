@@ -19,7 +19,7 @@
 @synthesize tabBarController;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];//测试
     self.window.backgroundColor = [UIColor whiteColor];
     [self setupViewControllers];
     [self.window setRootViewController:tabBarController];
