@@ -1,0 +1,38 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import"RDVTabBarController.h"
+    #import "WeatherClient.h"
+    #import "Tool.h"
+
+#import "AFJSONRequestOperation.h"
+#define API @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt"
+#define iphone5   ([UIScreen instancesRespondToSelector:@selector(currentMode)]?CGSizeEqualToSize(CGSizeMake(640,1136), [[UIScreen mainScreen] currentMode].size):NO)
+#define treadUrl  @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectAreasweather&areacode="
+
+#define lifeURL @"http://m.weather.com.cn/zs/101270101.html"
+#define LOGINAPI @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectUserInfo&"
+#define  PROVICENADDRESS @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectProv"
+#define  CITYADDRESS @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectCity&areacode="
+#define  COUNTRYADDRESS @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectCounty&areacode="
+#define DAYWEATHADDRESS @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectCurWeather1&areacode="
+#define DAYWEATHSTATEADDRESS @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectCurWeather2&areacode="
+#define WEEKWEATHADDRESS @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectAreasweather&areacode="
+#define PM2WEATHADDRESS @"http://pcc.scqx.gov.cn/jfids/data/GridData.svt?sqlid=PhoneService.selectPM&areacode="
+
+
+#endif
